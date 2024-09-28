@@ -37,9 +37,20 @@ class Calculations {
         }
     }
 
+    //This function ensures that a picked number has valid factors that can be added to the tax collector's score.
+    //If there are no factors, it prompts the user to pick a different number
+    public bool IsValidPick(int number, string[] array) {
+        foreach (int factor in GetFactors(number)) {
+            if (factor != number && array.Contains(factor.ToString())) {
+                return true;
+            }       
+        }
+        return false;
+    }
+
     //This function validates the numbers in the array to ensure that they either have factors or are a factor of something
     //For example, as long as '1' remains in the array, all prime numbers should return true in this function
-    //If a number no longer is a factor or has any factors, it returns false
+    //If a number no longer is a factor or has any factors, it returns false and removes it from the array, adding it to the tax collector's score
     public bool CheckFactors(int number, string[] array) {
         foreach (int factor in GetFactors(number)) {
             if (factor != number && array.Contains(factor.ToString())) {

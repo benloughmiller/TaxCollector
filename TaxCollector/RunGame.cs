@@ -1,13 +1,14 @@
 using System.Security.Cryptography.X509Certificates;
 
 class RunGame {
+    Calculations calculations = new Calculations();
     string[] numbers = Enumerable.Range(1, 50).Select(i => i.ToString()).ToArray();
     HashSet<int> pickedNumbers = new HashSet<int>();
-    Calculations calculations = new Calculations();
+    List<int> taxCollectorGains = new List<int>();
 
+    //This is the main function for the game
     public void Play() {
         while (pickedNumbers.Count < numbers.Length) {
-            List<int> taxCollectorGains = new List<int>();
             DisplayScores();
             DisplayArray(numbers);
 
@@ -25,15 +26,7 @@ class RunGame {
                 continue;
             }
 
-            bool validPick = false;
-            foreach (int factor in calculations.GetFactors(pickedNumber)) {
-                if (factor != pickedNumber && numbers.Contains(factor.ToString())) {
-                    validPick = true;
-                    break;
-                }
-            }
-
-            if (!validPick) {
+            if (!calculations.IsValidPick(pickedNumber, numbers)) {
                 Console.WriteLine("This number would not give the tax collector any points. Please pick another number.");
                 continue;
             }
@@ -78,7 +71,7 @@ class RunGame {
         }
     }
 
-    //*AI Assisted: Display each value in the array, grouping them in rows of 10 and spacing apart each value
+    //AI Assisted: This functtion displays each value in the array, grouping them in rows of 10 and spacing apart each value
     private void DisplayArray(string[] array) {
         for (int i = 0; i < array.Length; i++) {
             Console.Write($"{array[i],3}");
@@ -88,7 +81,7 @@ class RunGame {
         }
     }
 
-    //Displays the user's and Tax Collector's score
+    //This function displays the user's and Tax Collector's score
     private void DisplayScores() {
         int _userScore = calculations.GetUserScore();
         int _taxCollectorScore = calculations.GetCollectorScore();
@@ -96,7 +89,7 @@ class RunGame {
         Console.WriteLine($"Tax Collector's Score: {_taxCollectorScore}");
     }
 
-    //Determines who wins the game and displays the results
+    //This function determines who wins the game and displays the results
     private void FinalScore() {
         int _userScore = calculations.GetUserScore();
         int _taxCollectorScore = calculations.GetCollectorScore();
