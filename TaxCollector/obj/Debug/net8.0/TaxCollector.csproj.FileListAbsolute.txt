@@ -1,0 +1,15 @@
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\bin\Debug\net8.0\TaxCollector.exe
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\bin\Debug\net8.0\TaxCollector.deps.json
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\bin\Debug\net8.0\TaxCollector.runtimeconfig.json
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\bin\Debug\net8.0\TaxCollector.dll
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\bin\Debug\net8.0\TaxCollector.pdb
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\obj\Debug\net8.0\TaxCollector.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\obj\Debug\net8.0\TaxCollector.AssemblyInfoInputs.cache
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\obj\Debug\net8.0\TaxCollector.AssemblyInfo.cs
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\obj\Debug\net8.0\TaxCollector.csproj.CoreCompileInputs.cache
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\obj\Debug\net8.0\TaxCollector.sourcelink.json
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\obj\Debug\net8.0\TaxCollector.dll
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\obj\Debug\net8.0\refint\TaxCollector.dll
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\obj\Debug\net8.0\TaxCollector.pdb
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\obj\Debug\net8.0\TaxCollector.genruntimeconfig.cache
+C:\Users\benlo\OneDrive\.University\Fall 2024\CSE 310 - Applied Programming\CSE-310\Module 1\TaxCollector\obj\Debug\net8.0\ref\TaxCollector.dll
