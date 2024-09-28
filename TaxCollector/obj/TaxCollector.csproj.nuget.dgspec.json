@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benlo\\OneDrive\\.University\\Fall 2024\\CSE 310 - Applied Programming\\CSE-310\\Module 1\\TaxCollector\\TaxCollector.csproj": {}
+    "C:\\Users\\benlo\\OneDrive\\.University\\Fall 2024\\CSE 310 - Applied Programming\\CSE-310-Module1\\TaxCollector\\TaxCollector.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benlo\\OneDrive\\.University\\Fall 2024\\CSE 310 - Applied Programming\\CSE-310\\Module 1\\TaxCollector\\TaxCollector.csproj": {
+    "C:\\Users\\benlo\\OneDrive\\.University\\Fall 2024\\CSE 310 - Applied Programming\\CSE-310-Module1\\TaxCollector\\TaxCollector.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benlo\\OneDrive\\.University\\Fall 2024\\CSE 310 - Applied Programming\\CSE-310\\Module 1\\TaxCollector\\TaxCollector.csproj",
+        "projectUniqueName": "C:\\Users\\benlo\\OneDrive\\.University\\Fall 2024\\CSE 310 - Applied Programming\\CSE-310-Module1\\TaxCollector\\TaxCollector.csproj",
         "projectName": "TaxCollector",
-        "projectPath": "C:\\Users\\benlo\\OneDrive\\.University\\Fall 2024\\CSE 310 - Applied Programming\\CSE-310\\Module 1\\TaxCollector\\TaxCollector.csproj",
+        "projectPath": "C:\\Users\\benlo\\OneDrive\\.University\\Fall 2024\\CSE 310 - Applied Programming\\CSE-310-Module1\\TaxCollector\\TaxCollector.csproj",
         "packagesPath": "C:\\Users\\benlo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benlo\\OneDrive\\.University\\Fall 2024\\CSE 310 - Applied Programming\\CSE-310\\Module 1\\TaxCollector\\obj\\",
+        "outputPath": "C:\\Users\\benlo\\OneDrive\\.University\\Fall 2024\\CSE 310 - Applied Programming\\CSE-310-Module1\\TaxCollector\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\benlo\\AppData\\Roaming\\NuGet\\NuGet.Config"
