@@ -3,8 +3,8 @@
 class Program {
     static void Main(string[] args) {
         while (true) {
-            string choice = "";
             Console.Clear();
+            string choice = "";
             Console.WriteLine("1. Play Game");
             Console.WriteLine("2. Rules");
             Console.WriteLine("3. Quit");
@@ -14,8 +14,14 @@ class Program {
 
             switch (choice) {
                 case "1":
-                    RunGame runGame = new RunGame();
-                    runGame.Play();
+                    Console.Write("Please enter a maximum number for the game's range: ");
+                    string input = Console.ReadLine()!;
+                    if (int.TryParse(input, out int maxInput)) {
+                        new RunGame(maxInput);
+                    }
+                    else {
+                        Console.WriteLine("Invalid input. Please enter a valid integer.");
+                    }
                     break;
                 case "2":
                     RunGame.DisplayRules();

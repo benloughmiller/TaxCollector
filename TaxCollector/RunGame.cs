@@ -2,35 +2,22 @@ using System.Security.Cryptography.X509Certificates;
 
 class RunGame {
     Calculations calculations = new Calculations();
-    string[] numbers = Enumerable.Range(1, 50).Select(i => i.ToString()).ToArray();
     HashSet<int> pickedNumbers = new HashSet<int>();
     List<int> taxCollectorGains = new List<int>();
+    public RunGame(int maximum) {
+        Console.Clear();
+        Play(maximum);
+    }
+
 
     //This is the main function for the game
-    public void Play() {
+    private void Play(int maximum) {
+        string[] numbers = Enumerable.Range(1, maximum).Select(i => i.ToString()).ToArray();
+
         while (pickedNumbers.Count < numbers.Length) {
             DisplayScores();
             DisplayArray(numbers);
-
-            Console.Write("\nPick a number: ");
-            string input = Console.ReadLine()!;
-            if (string.IsNullOrWhiteSpace(input)) {
-                Console.WriteLine("Please pick a valid number.");
-                continue;
-            }
-            Console.Clear();
-
-            int pickedNumber;
-            if (!int.TryParse(input, out pickedNumber) || pickedNumber < 1 || pickedNumber > 50 || pickedNumbers.Contains(pickedNumber)) {
-                Console.WriteLine("Invalid input. Please enter a number between 1 and 50 that has not been picked.");
-                continue;
-            }
-
-            if (!calculations.IsValidPick(pickedNumber, numbers)) {
-                Console.WriteLine("This number would not give the tax collector any points. Please pick another number.");
-                continue;
-            }
-
+            int pickedNumber = PickNumber(maximum, numbers);
             calculations.SetUserScore(pickedNumber);
             Console.WriteLine($"You Gained: {pickedNumber}");
 
@@ -85,17 +72,38 @@ class RunGame {
     private void DisplayScores() {
         int _userScore = calculations.GetUserScore();
         int _taxCollectorScore = calculations.GetCollectorScore();
+        Console.Clear();
         Console.WriteLine($"Your Score: {_userScore}");
         Console.WriteLine($"Tax Collector's Score: {_taxCollectorScore}");
     }
 
+    //This function has the user pick a number and ensures that it is valid
+    public int PickNumber(int maximum, string[] array){
+        Console.Write("\nPick a number: ");
+        string input = Console.ReadLine()!;
+        while (true) {
+            int _pickedNumber;
+            if (!int.TryParse(input, out _pickedNumber) || _pickedNumber < 1 || _pickedNumber > maximum || pickedNumbers.Contains(_pickedNumber)) {
+                Console.Write("Invalid input. Please enter a number between 1 and the maximum number that has not been picked: ");
+                input = Console.ReadLine()!;
+                continue;
+            }
+            if (!calculations.IsValidPick(_pickedNumber, array)) {
+                Console.Write("This number would not give the tax collector any points. Please pick another number: ");
+                input = Console.ReadLine()!;
+                continue;
+            }
+            return _pickedNumber;
+        }
+    }
+    
     //This function determines who wins the game and displays the results
     private void FinalScore() {
         int _userScore = calculations.GetUserScore();
         int _taxCollectorScore = calculations.GetCollectorScore();
         Console.Clear();
         Console.WriteLine($"Final User's score: {_userScore}");
-        Console.WriteLine($"Final Tax Collector's score: {calculations.GetCollectorScore}");
+        Console.WriteLine($"Final Tax Collector's score: {_taxCollectorScore}");
 
         if (_userScore > _taxCollectorScore) {
             Console.WriteLine("Congratulations! You won!");
@@ -115,7 +123,7 @@ class RunGame {
     public static void DisplayRules() {
             Console.Clear();
             Console.WriteLine("Rules:");
-            Console.WriteLine("1. Each turn, you pick a number from 1 to 50.");
+            Console.WriteLine("1. Each turn, you pick a number from 1 and a number of your choice.");
             Console.WriteLine("2. You gain points equal to the number you pick.");
             Console.WriteLine("3. The tax collector gains points equal to the factors of the picked number that are still available.");
             Console.WriteLine("4. The selected number and its factors are removed from the game.");
