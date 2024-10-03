@@ -16,11 +16,15 @@ class Program {
                 case "1":
                     Console.Write("Please enter a maximum number for the game's range: ");
                     string input = Console.ReadLine()!;
-                    if (int.TryParse(input, out int maxInput)) {
-                        new RunGame(maxInput);
-                    }
-                    else {
-                        Console.WriteLine("Invalid input. Please enter a valid integer.");
+                    while (true) {
+                        if (int.TryParse(input, out int maxInput) && maxInput != 1) {
+                            new RunGame(maxInput);
+                            break;
+                        }
+                        else {
+                            Console.Write("Invalid input. Please enter a valid number:");
+                            input = Console.ReadLine()!;
+                        }
                     }
                     break;
                 case "2":

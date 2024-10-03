@@ -84,7 +84,7 @@ class RunGame {
         while (true) {
             int _pickedNumber;
             if (!int.TryParse(input, out _pickedNumber) || _pickedNumber < 1 || _pickedNumber > maximum || pickedNumbers.Contains(_pickedNumber)) {
-                Console.Write("Invalid input. Please enter a number between 1 and the maximum number that has not been picked: ");
+                Console.Write($"Invalid input. Please enter a number between 1 and {maximum} that has not been picked: ");
                 input = Console.ReadLine()!;
                 continue;
             }
