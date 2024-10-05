@@ -2,8 +2,8 @@ using System.Security.Cryptography.X509Certificates;
 
 class RunGame {
     Calculations calculations = new Calculations();
-    HashSet<int> pickedNumbers = new HashSet<int>();
-    List<int> taxCollectorGains = new List<int>();
+    private HashSet<int> pickedNumbers = new HashSet<int>();
+    private List<int> taxCollectorGains = new List<int>();
     public RunGame(int maximum) {
         Console.Clear();
         Play(maximum);

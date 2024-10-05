@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaxCollector")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40231763fc61d262199ca0d84598e5985e30ab01")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5247c806d78b3bbf2ada2dd3eb1818bf5872b37")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaxCollector")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaxCollector")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
