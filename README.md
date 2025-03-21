@@ -19,12 +19,6 @@ The rules of the game are as follows:
 
 This program was created entirely with the C# programming language and its base library
 
-# Useful Websites
-
-- [Hash Sets (GeeksforGeeks)](https://www.geeksforgeeks.org/hashset-in-c-sharp-with-examples/)
-- [Arrays (Microsoft)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays)
-- [Tax Collector Rules](https://mathforlove.com/wp-content/uploads/2023/02/Beat-the-Tax-Collector.pdf)
-
 # Future Work
 
 - Create a GUI for the program
